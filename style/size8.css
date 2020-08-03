@@ -148,7 +148,7 @@ hr {
   margin-bottom: 30px; }
 
 .container {
-  width: 500px;
+  width: 984px;
   margin: 0 auto; }
 
 @-webkit-keyframes fade-in {
@@ -341,12 +341,12 @@ hr {
   transform: translate(0px, 726px); }
 .tile.tile-position-1-8 {
   -webkit-transform: translate(0px, 847px);
-  -moz-transform: translate(0px, 605px);
-  transform: translate(0px, 605px); }
+  -moz-transform: translate(0px, 847px);
+  transform: translate(0px, 847px); }
 .tile.tile-position-2-1 {
-  -webkit-transform: translate(121px, 847px);
-  -moz-transform: translate(121px, 847px);
-  transform: translate(121px, 847px); }
+  -webkit-transform: translate(121px, 0px);
+  -moz-transform: translate(121px, 0px);
+  transform: translate(121px, 0px); }
 .tile.tile-position-2-2 {
   -webkit-transform: translate(121px, 121px);
   -moz-transform: translate(121px, 121px);
@@ -526,7 +526,7 @@ hr {
 .tile.tile-position-7-6 {
   -webkit-transform: translate(726px, 605px);
   -moz-transform: translate(726px, 605px);
-  transform: translate(726px, 726px); }
+  transform: translate(726px, 605px); }
 .tile.tile-position-7-7 {
   -webkit-transform: translate(726px, 726px);
   -moz-transform: translate(726px, 726px);
@@ -535,6 +535,38 @@ hr {
   -webkit-transform: translate(726px, 847px);
   -moz-transform: translate(726px, 847px);
   transform: translate(726px, 847px); }
+.tile.tile-position-8-1 {
+  -webkit-transform: translate(847px, 0px);
+  -moz-transform: translate(847px, 0px);
+  transform: translate(847px, 0px); }
+.tile.tile-position-8-2 {
+  -webkit-transform: translate(847px, 121px);
+  -moz-transform: translate(847px, 121px);
+  transform: translate(847px, 121px); }
+.tile.tile-position-8-3 {
+  -webkit-transform: translate(847px, 242px);
+  -moz-transform: translate(847px, 242px);
+  transform: translate(847px, 242px); }
+.tile.tile-position-8-4 {
+  -webkit-transform: translate(847px, 363px);
+  -moz-transform: translate(847px, 363px);
+  transform: translate(847px, 363px); }
+.tile.tile-position-8-5 {
+  -webkit-transform: translate(847px, 484px);
+  -moz-transform: translate(847px, 484px);
+  transform: translate(847px, 484px); }
+.tile.tile-position-8-6 {
+  -webkit-transform: translate(847px, 605px);
+  -moz-transform: translate(847px, 605px);
+  transform: translate(847px, 605px); }
+.tile.tile-position-8-7 {
+  -webkit-transform: translate(847px, 726px);
+  -moz-transform: translate(847px, 726px);
+  transform: translate(847px, 726px); }
+.tile.tile-position-8-8 {
+  -webkit-transform: translate(847px, 847px);
+  -moz-transform: translate(847px, 847px);
+  transform: translate(847px, 847px); }
 
 .tile {
   position: absolute;
