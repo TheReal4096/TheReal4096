@@ -1,16 +1,22 @@
-function GameManager(size, InputManager, Actuator, StorageManager, easy) {
+function GameManager(size, InputManager, Actuator, StorageManager) {
   this.size           = size; // Size of the grid
   this.inputManager   = new InputManager;
   this.storageManager = new StorageManager;
   this.actuator       = new Actuator;
-  this.easy           = easy;
 
   this.startTiles     = 2;
-  this.maxStartingTile = 1;
 
   this.inputManager.on("move", this.move.bind(this));
   this.inputManager.on("restart", this.restart.bind(this));
   this.inputManager.on("keepPlaying", this.keepPlaying.bind(this));
+  if (this.size < 4)
+  {
+    var lasttileclass = Math.pow(2, (this.size * (this.size + 1))/2)
+  }
+  else
+  {
+    var lasttileclass = Math.pow(2, (this.size * (this.size + 1))/2 + 1)
+  }
 
   this.setup();
 }
@@ -48,7 +54,6 @@ GameManager.prototype.setup = function () {
   } else {
     this.grid        = new Grid(this.size);
     this.score       = 0;
-    this.maxStartingTile = 1;
     this.over        = false;
     this.won         = false;
     this.keepPlaying = false;
@@ -71,7 +76,16 @@ GameManager.prototype.addStartTiles = function () {
 // Adds a tile in a random position
 GameManager.prototype.addRandomTile = function () {
   if (this.grid.cellsAvailable()) {
-    var tile = new Tile(this.grid.randomAvailableCell(), Math.ceil(Math.random() * 1);
+    if (this.size < 4)
+    {
+      var value = 2;
+    }
+    else
+    {
+      var value = Math.random() < 0.9 ? 2 : 4;
+    }
+    var tile = new Tile(this.grid.randomAvailableCell(), value);
+
     this.grid.insertTile(tile);
   }
 };
@@ -155,13 +169,7 @@ GameManager.prototype.move = function (direction) {
 
         // Only one merger per row traversal?
         if (next && next.value === tile.value && !next.mergedFrom) {
-          var merged = new Tile(positions.next, tile.value + 1);
-          
-          if (this.easy && tile.value > this.maxStartingTile - 5)
-          {
-            this.maxStartingTile = this.maxStartingTile + 1;
-          }
-          
+          var merged = new Tile(positions.next, tile.value * 2);
           merged.mergedFrom = [tile, next];
 
           self.grid.insertTile(merged);
