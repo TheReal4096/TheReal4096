@@ -2,9 +2,10 @@
 <html lang="en" manifest="https://aarextiaokhiao.github.io/Aarex2048/cache.appcache">
 <head>
   <meta charset="utf-8">
-  <title>Super2048</title>
+  <title>Super65536</title>
 
   <link href="https://aarextiaokhiao.github.io/Aarex2048/style/main.css" rel="stylesheet" type="text/css">
+  <link href="https://aarextiaokhiao.github.io/Aarex2048/style/tiles.css" rel="stylesheet" type="text/css">
   <link rel="shortcut icon" href="https://aarextiaokhiao.github.io/Aarex2048/favicon.ico">
   <link rel="apple-touch-icon" href="https://aarextiaokhiao.github.io/Aarex2048/meta/apple-touch-icon.png">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -15,15 +16,15 @@
   <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
   <meta name="format-detection" content="telephone=no" />
 
-  <meta property="og:title" content="Super2048 game"/>
-  <meta property="og:site_name" content="Super2048 game"/>
-  <meta property="og:description" content="Join the numbers and get to the 2048 tile! Careful: this game is extremely addictive!"/>
+  <meta property="og:title" content="Super65536 game"/>
+  <meta property="og:site_name" content="Super65536 game"/>
+  <meta property="og:description" content="Join the numbers and get to the 65536 tile! Careful: this game is extremely addictive!"/>
   <meta property="og:image" content="http://gabrielecirulli.github.io/2048/meta/og_image.png"/>
 </head>
 <body>
   <div class="container">
     <div class="heading">
-      <h1 class="title">Super2048</h1>
+      <h1 class="title">Super65536</h1>
       <div class="scores-container">
         <div class="score-container">0</div>
         <div class="best-container">0</div>
@@ -31,7 +32,7 @@
     </div>
 
     <div class="above-game">
-      <p class="game-intro">Join the numbers and get to the <strong>2048 tile!</strong></p>
+      <p class="game-intro">Join the numbers and get to the <strong>65536 tile!</strong></p>
       <a class="restart-button">Play again</a>
     </div>
 
@@ -96,7 +97,7 @@
   <script src="https://aarextiaokhiao.github.io/Aarex2048/js/local_storage_manager.js"></script>
   <script src="js/game_manager.js"></script>
   <script>
-  var Goal = 2048
+  var Goal = 65536
   window.requestAnimationFrame(function () {
   new GameManager(4, KeyboardInputManager, HTMLActuator, LocalStorageManager);
   });
