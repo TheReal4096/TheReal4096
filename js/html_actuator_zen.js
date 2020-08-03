@@ -37,7 +37,7 @@ HTMLActuator.prototype.actuate = function (grid, metadata) {
 };
 
 // Continues the game (both restart and keep playing)
-HTMLActuator.prototype.continue = function () {
+HTMLActuator.prototype.continueGame = function () {
   if (typeof ga !== "undefined") {
     ga("send", "event", "game", "restart");
   }
@@ -60,7 +60,7 @@ HTMLActuator.prototype.addTile = function (tile) {
   var positionClass = this.positionClass(position);
 
   // We can't use classlist because it somehow glitches when replacing classes
-  
+    
   var classes = ["tile"];
   
   // Find tile value by rounding down to the nearest power of two.
@@ -73,7 +73,7 @@ HTMLActuator.prototype.addTile = function (tile) {
   classes.push("tile-" + newValue);
   
   classes.push(positionClass);
-  
+
   if (tile.value > 2048) classes.push("tile-super");
 
   this.applyClasses(wrapper, classes);
